@@ -1,0 +1,55 @@
+.payment_method_iute-credit fieldset {
+    padding: 0 !important;
+
+    .--range {
+        display: none;
+    }
+}
+
+.iute {
+    &-list-group {
+        width: 100%;
+        @include flex;
+
+        &-item {
+            cursor: pointer;
+            border: 1px solid #eee;
+            flex: 1 1 0;
+            background-color: #fff;
+            transition: transform .2s ease;
+
+            span {
+                text-align: center;
+                font-size: 12px;
+                display: block;
+                padding: 7.5px 0;
+                background-color: #000;
+                color: #fff;
+                align-self: flex-start;
+            }
+
+            div[id^="period-monthly-payment"] {
+                height: 100px;
+                color: #333;
+                @include flex;
+            }
+
+            &.active {
+                transform: scale(1.01);
+                box-shadow: 0 0 8px rgba(#000, .2);
+
+                span {
+                    background-color: $c_red;
+                }
+            }
+        }
+    }
+
+    &-tab {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.iute_loan_status_tab a:before {
+  content: '' !important;
+  height: 13px;
+  width: 13px;
+  background-image: url("/wp-content/plugins/iute-credit/assets/dist/img/dollar-symbol.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+#iute_loan_status {
+  padding: 12px;
+}
+
+#iute_loan_status p {
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#iute_loan_status .approwed {
+  color: #0275d8;
+}
+
+#iute_loan_status .rejected {
+  color: #d9534f;
+}
+
+#iute_loan_status .in_proccess {
+  color: #f0ad4e;
+}
+
+#iute_loan_status .signed {
+  color: #5cb85c;
+}
+
+.iute-order {
+  width: 100% !important;
+}

@@ -1,0 +1,42 @@
+@mixin flex($direction: row, $content: center, $items: center) {
+    display: flex;
+    align-items: $items;
+    justify-content: $content;
+    flex-direction: $direction;
+}
+
+// custom media
+$media-types: (xs: '(max-width: 320px)',
+sm: '(max-width: 576px)',
+md: '(max-width: 768px)',
+lg: '(max-width: 992px)',
+ws: '(max-width: 1024px)',
+xl: '(max-width: 1200px)',
+hd: '(max-width: 1367px)',
+rwd: '(max-width: 1440px)',
+fhd: '(max-width: 1920px)'
+);
+
+@mixin media($media) {
+    @media #{map-get($media-types, $media)} {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
